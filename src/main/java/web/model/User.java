@@ -33,7 +33,7 @@ public class User implements UserDetails {
     private Integer age;
 
     @ManyToMany(cascade = CascadeType.MERGE,
-                fetch = FetchType.LAZY)
+                fetch = FetchType.EAGER)
     private Set<Role> roles;
 
     @Override
